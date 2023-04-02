@@ -24,12 +24,7 @@ function App() {
   }, [tasks]);
 
   const fetchTasks = async () => {
-    const data = await fetch(import.meta.env.VITE_END_POINT, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const data = await fetch(import.meta.env.VITE_END_POINT);
     const response = await data.json();
     setTasks(response.tasks);
   };
