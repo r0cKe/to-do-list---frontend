@@ -1,0 +1,157 @@
+:root {
+  --primary-color: #a683e3;
+  --text-color: #00204a;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: -webkit-linear-gradient(65deg, #a683e3 50%, #e4e9fd 50%);
+}
+
+.App > div {
+  width: 100%;
+}
+
+h1 {
+  color: #fff;
+  padding: 10px;
+}
+
+.box {
+  max-width: 400px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+#heading {
+  background-color: #a683e3;
+  text-align: center;
+}
+
+.itemContainer {
+  cursor: move;
+}
+
+.newItem,
+.item {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.newItem {
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.item p {
+  width: 100%;
+  max-width: 328px;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.item button {
+  width: 25px;
+  margin-right: 20px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.newItem:last-child {
+  border-bottom: 0;
+}
+
+input:checked + p {
+  text-decoration: line-through;
+  text-decoration-color: #a683e3;
+}
+
+input[type="checkbox"] {
+  margin: 20px;
+}
+
+p {
+  margin: 0;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 200;
+  color: var(--text-color);
+}
+
+form.newItem {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.newItem button {
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #a683e3;
+  color: #fff;
+  font-size: 30px;
+  transition: transform 0.3s;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+input[type="text"] {
+  text-align: center;
+  height: 60px;
+  flex-grow: 1;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 #a683e3;
+}
+
+::placeholder {
+  color: grey;
+  opacity: 1;
+}
+
+footer {
+  color: white;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .box {
+    width: 90%;
+  }
+
+  .newItem button {
+    min-height: 30px;
+    width: 30px;
+    font-size: 25px;
+  }
+
+  /* button {
+    min-height: 35px;
+    width: 35px;
+    font-size: 30px;
+  } */
+}
